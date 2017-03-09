@@ -9,6 +9,7 @@ $(document).ready(function(){
 		//老数据改变后更新需要用child_changed
 		//child_added is an event listener different from value listener
  		//snap is also an object , 可以用来遍历
+
  		var name=snap.child("Name").val();
  		var email=snap.child("Email").val();
  		

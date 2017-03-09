@@ -92,10 +92,25 @@ if (navigator.geolocation) {
      
       }
 
+ var triangleCoords = [
+          {lat: 42, lng: -83},
+          {lat: 50, lng: -80},
+          {lat: 32.321, lng: -64.757},
+          {lat: 25.774, lng: -80.190}
+        ];
+
+
+
+
+
+
+
 
    // Handles click events on a map, and adds a new point to the Polyline.
       function addLatLng(event) {
         var path = poly.getPath();
+        console.log(event.latLng);
+        //by mcy know how marker works
 
         // Because path is an MVCArray, we can simply append a new coordinate
         // and it will automatically appear.
@@ -110,13 +125,19 @@ if (navigator.geolocation) {
       }
 
 
+
+
+
+
+
 $(window).load(function(){
  var map= document.getElementById('map');
     if (navigator.geolocation) {
          navigator.geolocation.getCurrentPosition(function (position) {
              initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 console.log(initialLocation);
-             map.setCenter(initialLocation);
+            // map.setCenter(initialLocation);
+            //似乎不需要，有了反而报错
          });
      }
   });//]]> 
