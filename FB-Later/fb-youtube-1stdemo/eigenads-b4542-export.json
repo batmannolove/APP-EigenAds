@@ -1,0 +1,135 @@
+{
+  "Email" : {
+    "0" : "batmannolove@gmail.com",
+    "-Kefkwp1UrCd0JZmI0gy" : "457301852@qq.com",
+    "-Kefn9ayxTLsbl2fXHz0" : "",
+    "-KefnSkBP4Mh5jbeq3m1" : "",
+    "-KefnZlLlU6atDcOn82V" : ""
+  },
+  "Text" : "shit",
+  "Users" : {
+    "user_01" : {
+      "Email" : "batmannolove@gmail.com",
+      "Name" : "Max"
+    },
+    "user_02" : {
+      "Email" : "dailu@umich.edu",
+      "Name" : "Lu"
+    }
+  },
+  "post-comments" : {
+    "-KejEa3E4SQLtMmasLWw" : {
+      "-KekfYX5kKgb8k-fMKSi" : {
+        "text" : "good",
+        "uid" : "eHxvteaWCbWu7QWQgi0VAjw0ied2"
+      },
+      "-KekfeKCHSwZ9i7dK_HT" : {
+        "author" : "Chiyuan Ma",
+        "text" : "i am ma111m",
+        "uid" : "7Ml6m7aChbgBok06fQDVUishyP63"
+      }
+    },
+    "-KekfhwYqfmBnERJcCRc" : {
+      "-KekfxcO5KuQ4lXliZIF" : {
+        "text" : "i am not google acoutn",
+        "uid" : "eHxvteaWCbWu7QWQgi0VAjw0ied2"
+      }
+    }
+  },
+  "posts" : {
+    "-KejEa3E4SQLtMmasLWw" : {
+      "author" : "Chiyuan Ma",
+      "authorPic" : "https://lh4.googleusercontent.com/-FvTGH20q8iw/AAAAAAAAAAI/AAAAAAAADNE/dXlEHX6Jy7k/photo.jpg",
+      "body" : "this is my first post",
+      "starCount" : 0,
+      "title" : "FirstPost",
+      "uid" : "KT5RsjORnwTW6nhfKzMBLO8Da2u1"
+    },
+    "-KekfhwYqfmBnERJcCRc" : {
+      "author" : "Chiyuan Ma",
+      "authorPic" : "https://lh4.googleusercontent.com/-9JEvdEv0P9g/AAAAAAAAAAI/AAAAAAAAAus/ofimIt8B2iM/photo.jpg",
+      "body" : "haha",
+      "starCount" : 0,
+      "title" : "i have to be google acount",
+      "uid" : "7Ml6m7aChbgBok06fQDVUishyP63"
+    },
+    "-KelWq6pU3NfJFZKynWu" : {
+      "author" : "Chiyuan Ma",
+      "authorPic" : "https://lh4.googleusercontent.com/-FvTGH20q8iw/AAAAAAAAAAI/AAAAAAAADNE/dXlEHX6Jy7k/photo.jpg",
+      "body" : "xixi",
+      "starCount" : 0,
+      "title" : "next one",
+      "uid" : "KT5RsjORnwTW6nhfKzMBLO8Da2u1"
+    }
+  },
+  "regions" : {
+    "reg1" : {
+      "loc0" : {
+        "lat" : 42.285051,
+        "lng" : -83.084667
+      },
+      "loc1" : {
+        "lat" : 42.275191,
+        "lng" : -83.078671
+      },
+      "loc2" : {
+        "lat" : 42.267672,
+        "lng" : -83.04602
+      },
+      "name" : "bridgeRoadRegion"
+    },
+    "reg2" : {
+      "loc0" : {
+        "lat" : 42.28,
+        "lng" : -83.08
+      },
+      "loc1" : {
+        "lat" : 42.27,
+        "lng" : -83.07
+      },
+      "loc2" : {
+        "lat" : 42.26,
+        "lng" : -83.04
+      },
+      "name" : "StClairRegion"
+    }
+  },
+  "user-posts" : {
+    "KT5RsjORnwTW6nhfKzMBLO8Da2u1" : {
+      "-KejEa3E4SQLtMmasLWw" : {
+        "author" : "Chiyuan Ma",
+        "authorPic" : "https://lh4.googleusercontent.com/-FvTGH20q8iw/AAAAAAAAAAI/AAAAAAAADNE/dXlEHX6Jy7k/photo.jpg",
+        "body" : "this is my first post",
+        "starCount" : 0,
+        "title" : "FirstPost",
+        "uid" : "KT5RsjORnwTW6nhfKzMBLO8Da2u1"
+      },
+      "-KelWq6pU3NfJFZKynWu" : {
+        "author" : "Chiyuan Ma",
+        "authorPic" : "https://lh4.googleusercontent.com/-FvTGH20q8iw/AAAAAAAAAAI/AAAAAAAADNE/dXlEHX6Jy7k/photo.jpg",
+        "body" : "xixi",
+        "starCount" : 0,
+        "title" : "next one",
+        "uid" : "KT5RsjORnwTW6nhfKzMBLO8Da2u1"
+      }
+    }
+  },
+  "users" : {
+    "7Ml6m7aChbgBok06fQDVUishyP63" : {
+      "email" : "ma111m@uwindsor.ca",
+      "profile_picture" : "https://lh4.googleusercontent.com/-9JEvdEv0P9g/AAAAAAAAAAI/AAAAAAAAAus/ofimIt8B2iM/photo.jpg",
+      "username" : "Chiyuan Ma"
+    },
+    "I5JEwrXbVWPki0khOtIp5OpMXOl2" : {
+      "email" : "batmannolove111@gmail.com"
+    },
+    "KT5RsjORnwTW6nhfKzMBLO8Da2u1" : {
+      "email" : "batmannolove@gmail.com",
+      "profile_picture" : "https://lh4.googleusercontent.com/-FvTGH20q8iw/AAAAAAAAAAI/AAAAAAAADNE/dXlEHX6Jy7k/photo.jpg",
+      "username" : "Chiyuan Ma"
+    },
+    "eHxvteaWCbWu7QWQgi0VAjw0ied2" : {
+      "email" : "4332@gmail.com"
+    }
+  }
+}

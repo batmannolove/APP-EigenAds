@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Draggable Polygons</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+       #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+    </style>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+
+      <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+      <script>
+          // Initialize Firebase
+          var config = {
+              apiKey: "AIzaSyAkJ8ZpvZIPhmqRtPijWUzm9AscDyLmWow",
+              authDomain: "eigenads-b4542.firebaseapp.com",
+              databaseURL: "https://eigenads-b4542.firebaseio.com",
+              storageBucket: "eigenads-b4542.appspot.com",
+              messagingSenderId: "231627362733"
+          };
+          firebase.initializeApp(config);
+      </script>
+  </head>
+  <body>
+   <!--  <div id="map"></div> -->
+ <div id="floating-panel">
+     <ul>
+         <li><input class="toggle-event" type="checkbox" checked data-toggle="toggle"></li>
+         <li><input  class="toggle-event" type="checkbox" checked data-toggle="toggle"></li>
+     </ul>
+<div id="console-event"></div>
+      <input onclick="remove();" type=button value="Remove line">
+      <input onclick="add();" type=button value="Restore line">
+    </div>
+<div id="map" style="width: 1000px; height: 800px;"></div>
+
+    <script>
+      // This example creates draggable triangles on the map.
+      // Note also that the red triangle is geodesic, so its shape changes
+      // as you drag it north or south.
+
+
+
+
+
+
+      function goon(coords,reg) {
+
+          var region=reg;
+          // Construct a draggable red triangle with geodesic set to true.
+
+          pos[reg]=  new google.maps.Polygon({
+              map: map,
+              paths: coords,
+              strokeColor: '#FF0000',
+              strokeOpacity: 0.1,
+              strokeWeight: 2,
+              fillColor: '#5d5d5d',
+              fillOpacity: 0.35,
+              draggable: true,
+              geodesic: true
+          });
+
+
+         // pos1.setMap(map);
+
+
+//          var blueCoords = [
+//              {lat:
+//                  42.2, lng:
+//                  -83},
+//              {lat: 41.98, lng: -82.98},
+//              {lat:
+//                  42, lng:
+//                  -83.1}
+//          ];
+//
+//          // Construct a draggable blue triangle with geodesic set to false.
+//          pos2=   new google.maps.Polygon({
+//              map: map,
+//              paths: blueCoords,
+//              strokeColor: '#0000FF',
+//              strokeOpacity: 0.8,
+//              strokeWeight: 2,
+//              fillColor: '#0000FF',
+//              fillOpacity: 0.35,
+//              draggable: true,
+//              geodesic: false
+//          });
+//
+//
+//          pos2.setMap(map);
+
+      }
+
+
+
+
+
+      //firebase method
+      var fetchPosts = function(postsRef,reg) {
+          //postsRef means loc0 loc1 loc2
+
+
+
+          //var regionTemp=new Object();
+          //not objcet, it is a array actually
+
+          //var Coords = [];
+          //not working
+
+          var region=reg;
+          var Coords= new Array();
+
+          postsRef.on('child_added', function(data) {
+              var lat = data.val().lat;
+              var lng = data.val().lng;
+
+
+
+
+              var pos={};
+              pos.lat=lat;
+              pos.lng=lng;
+              Coords.push(pos);
+              //regionTemp.push(pos);
+
+                if(Coords.length==3)
+                {
+                    goon(Coords,region);
+
+                }
+          });
+
+
+
+//                postsRef.on('child_changed', function(data) {
+//                    var containerElement = sectionElement.getElementsByClassName('posts-container')[0];
+//                    var postElement = containerElement.getElementsByClassName('post-' + data.key)[0];
+//                    postElement.getElementsByClassName('mdl-card__title-text')[0].innerText = data.val().title;
+//                    postElement.getElementsByClassName('username')[0].innerText = data.val().author;
+//                    postElement.getElementsByClassName('text')[0].innerText = data.val().body;
+//                    postElement.getElementsByClassName('star-count')[0].innerText = data.val().starCount;
+//                });
+//
+//
+//
+//                postsRef.on('child_removed', function(data) {
+//                    var containerElement = sectionElement.getElementsByClassName('posts-container')[0];
+//                    var post = containerElement.getElementsByClassName('post-' + data.key)[0];
+//                    post.parentElement.removeChild(post);
+//                });
+      };
+
+
+
+
+
+
+
+
+
+      var pos=[];
+//var pos2;
+var map;
+      function initMap() {
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat: 42.285051, lng:-83.084667},
+          mapTypeId: 'terrain',
+           styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
+        });
+
+
+//          var regions = firebase.database().ref('regions/' + 'reg1');
+//
+//        fetchPosts(regions,0);
+//
+//          var regions2 = firebase.database().ref('regions/' + 'reg2');
+//
+//          fetchPosts(regions2,1);
+
+
+          var firebaseRef=firebase.database().ref();
+          var regions = firebaseRef.child('regions');
+regions.on('child_added', function(data) {
+
+console.log(data.val().loc0);
+//work
+
+    //fetchPosts(data,0);
+
+});
+
+
+
+
+//          var regions = firebase.database().ref("regions");
+//          regions.on("child_added",snap=>{
+//
+//              snap.forEach(function(childSnapshot) {
+//                  console.log(childSnapshot)
+//              //Here you can access  childSnapshot.key
+//             // fetchPosts(childSnapshot,0);
+//          });
+//
+//
+//          });
+          //not working
+
+
+
+
+
+
+
+
+      }
+
+
+      function remove(idTemp) {
+
+          pos[idTemp].setMap(null);
+      }
+      function add(idTemp) {
+          pos[idTemp].setMap(map);
+      }
+
+
+
+      //toggle bootstrap
+        $(function() {
+    $('.toggle-event').change(function() {
+     // $('#console-event').html('Toggle: ' + $(this).prop('checked'))
+
+
+        //console.log($(this).parents('li').index())
+        var indexTemp=$(this).parents('li').index();
+
+if($(this).prop('checked'))
+{
+
+add(indexTemp);
+}
+else
+
+remove(indexTemp);
+
+    });
+
+
+
+
+
+        })
+    </script>
+     <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVWz2PUS43XXyj3IuLlkZ0XmI_IFwGTws&callback=initMap">
+    </script>
+
+
+  </body>
+</html>
