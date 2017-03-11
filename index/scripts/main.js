@@ -107,7 +107,7 @@ function createPostElement(postId, title, text, author, authorId, authorPic) {
             '<div class="starred material-icons">star</div>' +
             '<div class="star-count">0</div>' +
           '</span>' +
-          '<div class="text"></div>' +'<img src="images/livemap.jpg">'+
+          '<div class="text"></div>' +'<iframe src="../detail/index.html" style="border:0px;width:100%;height: 390px"></iframe>'+
           '<div class="comments-container"></div>' +
           '<form class="add-comment" action="#">' +
             '<div class="mdl-textfield mdl-js-textfield">' +
@@ -117,6 +117,9 @@ function createPostElement(postId, title, text, author, authorId, authorPic) {
           '</form>' +
         '</div>' +
       '</div>';
+
+
+// <iframe   name="iFrame1" width="100%" onload="this.height=iFrame1.document.body.scrollHeight" frameborder="0" src="../detail/index.html"></iframe>
 
   // Create the DOM element from the HTML.
   var div = document.createElement('div');
