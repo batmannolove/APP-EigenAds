@@ -16,8 +16,6 @@
 https://eigen-1f108.firebaseapp.com/advertise.html
 
 
-http://www.epicentreuwindsor.ca/introducing-eigen-advertisement/
-
 
   The entire idea for eigen. Advertisements is a fairly new and unique concept that works similarly to other businesses such as Uber and AirBnB. This business model allows local businesses to benefit through inexpensive advertising costs and  drivers benefit by earning income for placing ads on their vehicle. This sharing economy approach means anybody with a vehicle can potentially contribute and earn income from having advertisements placed on their vehicles.
   
