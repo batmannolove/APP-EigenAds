@@ -2,6 +2,8 @@
 
 
 ![image](https://cloud.githubusercontent.com/assets/6482545/25625482/a0ec31c2-2f2a-11e7-8d6f-866d1c742456.png)
+
+
   The idea for eigen. Advertisement came from observing advertisement placements on a bus. We saw an advertisement for a lawyer and thought it would a great idea  to create a sharing economy for advertising to promote local businesses at affordable prices. Ultimately, the idea is to use everyday vehicles on the road, which have a ton of free space, to advertise for local businesses.
 
 
