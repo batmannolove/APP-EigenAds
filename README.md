@@ -102,4 +102,8 @@ Firebase
 ![image](https://cloud.githubusercontent.com/assets/6482545/25629630/2b51a736-2f38-11e7-9690-5b7592c4dfc6.png)
 
 
+More details at:
+
+
+https://github.com/batmannolove/APP-EigenAds/issues
 
