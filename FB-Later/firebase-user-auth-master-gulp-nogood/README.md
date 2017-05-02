@@ -1,1 +1,0 @@
-# firebase-user-auth

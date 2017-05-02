@@ -1,0 +1,330 @@
+"eigen-1f108" : {
+	"users" : {
+		"drivers" : {
+			"userInfo" : {
+				"<user_UID>" : {
+					"firstName" : "",
+					"lastName" : "",
+					"email" : "",
+					"city" : "",
+					"DOB" : "yyyy-mm-dd",
+					"signUpDate" : "yyyy-mm-ddThh:mm"
+				}
+			},
+			"carInfo" : {
+				"<user_UID>" : {
+					"make" : "",
+					"model" : "",
+					"colour" : "",
+					"year" : 0000,
+					"VIN" : ""
+				}
+			},
+			"iBeacon" : {
+				"<user_UID>" : {
+					"UUID" : "",
+					"Major" : "",
+					"Minor" : ""
+				}
+			},
+			"tripLogPaths" : {									// tripLogPaths only when user is on campaign - see testPeriodTripLogs for test period trips
+				"<user_UID>" : [
+					0 : [										//campaign_index
+						0 : [									//trip_index
+							0 : {								//location_index
+								"lat" : 0.0,
+								"lon" : 0.0
+							},
+							1 : {
+								"lat" : 0.0,
+								"lon" : 0.0
+							},
+							2 : {
+								"lat" : 0.0,
+								"lon" : 0.0
+							}
+						]
+					]
+				]
+			},
+			"tripLogInformation" : {
+				"<user_UID>" : {
+					"testPeriod" : [
+						0 : {									//test period trip_index
+							"totalDistance" : 0,
+							"startTimeStamp" : "yyyy-mm-ddThh:mm",
+							"endTimeStamp" : "yyyy-mm-ddThh:mm"
+						}
+					],
+					"campaign" : [
+						0 : [ 									//driver_campaign_index
+							0 : {								
+								"ammountMade" : 0,
+								"effectiveDistance" : 0,
+								"totalDistance" : 0,
+								"startTimeStamp" : "yyyy-mm-ddThh:mm",
+								"endTimeStamp" : "yyyy-mm-ddThh:mm"
+							}
+						]
+					]
+				}
+			},
+			"testPeriodInfo" : {
+				"<user_UID>" : {
+					"isComplete" : false,
+					"startTimeStamp" : "yyyy-mm-ddT00:00",
+					"numberOfDaysDriving" : 0
+				}
+			},
+			"testPeriodTripLogs" : [
+				0 : [										//region_index
+					"<user0_UID>" : [
+						0 : [								//trip_index
+							0 : {							//location_index
+								"lat" : 0.0,
+								"lon" : 0.0
+							},
+							1 : {
+								"lat" : 0.0,
+								"lon" : 0.0
+							}
+						]
+					]
+				]
+			],
+			"campaignHistory" : {
+				"<user_UID>" : [
+					0 : {
+						"adveritserUID" : "<adveritser_UID>",
+						"planIndex" : 0,
+						"CPK" : 12,
+						"planDistance" : 500000,
+						"effectiveDistance" : 0,
+						"totalDistance" : 0,
+						"isComplete" : false
+					}
+				]
+			},
+			"signUpVerification" : {
+				"<user_UID>" : {
+					"userApproved" : false,
+					"nameMatchesDriversLicence" : false,
+					"nameMatchesInsurance" : false,
+					"DOBMatchesDriversLicence" : false,
+					"VINMatchesRegistrationVIN" : false,
+					"VINMatchesInsuranceVIN" : false,
+					"VINMatchesVehicle" : false,
+					"driversLicenceIsValid" : false,
+					"insuranceFormIsValid" : false
+				}
+			},
+			"newToVette" : [
+				0 : "<user_UID>"
+			],
+			"failedVette" : [
+				0 : {
+					"driverUID" : "<user_UID>",
+					"issueDescriptors" : [
+						0 : "<issue_description>"
+					],
+					"notifiedTimeStamp" : "yyyy-mm-ddThh:mm"
+				}
+			],
+			"avaliable" : [
+				0 : [											//region_index
+					0 : "<user0_UID>"							//driver_index
+				]
+			],
+			"campaignRequests" : {
+				"<user_UID>" : [
+					0 : {
+						"advertiserUID" : "<adveritser_UID>",
+						"pendingIndex" : 0,
+						"seen" : false
+					}
+				]
+			},
+			"pictureRequests" : {
+				"<user_UID>" : [
+					0 : {
+						"reasonDescriptor" : "",
+						"requestSentTimeStamp" : "yyyy-mm-ddThh:mm",
+						"requestDueTimeStamp" : "yyyy-mm-ddThh:mm",
+						"isSeen" : false,
+						"isSeenTimeStamp" : "yyyy-mm-ddThh:mm"
+					}
+				]
+			}
+			"notification" : {
+				"<driver_UID>" : "<device_APNs_token>"
+			},
+			"ratings" : {
+				"<driver_UID>" : {
+					"param0" : 10
+				}
+			} 
+		},
+		"advertisers" : {
+			"userInfo" : {
+				"<adveritser_UID>" : {
+					"businessName" : "",
+					"signeeName" : "",
+					"email" : "",
+					"phoneNumber" : "",
+				}
+			},
+			"billing" : {
+				"<adveritser_UID>" : {
+					"addressLineOne" : "",
+					"addressLineTwo" : "",
+					"suite" : "",
+					"city" : "",
+					"province" : "",
+					"country" : "",
+					"postalCode" : ""
+				}
+			},
+			"campaignHistory" : {
+				"<adveritser_UID>" : [
+					0 : {											//advertiser_campaign_index
+						"campaignDescriptor" : "",
+						"startTimeStamp" : "yyyy-mm-ddThh:mm",
+						"invoiceIndex" : 0,
+						"regions" : [
+							0 : [									//region_index
+								0 : {								//gate_coordinate_index
+									"lat" : 0.0,
+									"lon" : 0.0
+								}
+							]
+						],
+						"drivers" : [
+							0 : {
+								"driverUID" : "<driver_UID>",
+								"wrapTimeStamp" : "yyyy-mm-ddThh:mm"
+							}
+						],
+						"planInfo" : {
+							"planIndex" : 0,
+							"distanceIndex" : 0
+						}
+					}
+				]
+			},
+			"pendingCampaigns" : {
+				"<adveritser_UID>" : [
+					0 : {
+						"campaignDescriptor" : "",
+						"requestSentTimeStamp" : "yyyy-mm-ddThh:mm",
+						"invoiceIndex" : 0,
+						"regions" : [
+							0 : [									//region_index
+								0 : {								//gate_coordinate_index
+									"lat" : 0.0,
+									"lon" : 0.0
+								}
+							]
+						],
+						"drivers" : [
+							0 : {
+								"driverUID" : "<driver_UID>",
+								"isSeen" : false,
+								"isConfirmed" : false,
+								"isDenied" : false,
+								"seenTimeStamp" : "yyyy-mm-ddThh:mm",
+								"confimedTimeStamp" : "yyyy-mm-ddThh:mm"
+							}
+						],
+						"planInfo" : {
+							"price" : 97800,
+							"planIndex" : 0,
+							"distanceIndex" : 0
+						}
+					}
+				]
+			},
+			"pictureRequests" : {
+				"<adveritser_UID>" : [
+					0 : {
+						"requestSentTimeStamp" : "yyyy-mm-ddThh:mm",
+						"requestDueTimeStamp" : "yyyy-mm-ddThh:mm",
+						"drivers" : [
+							0 : {
+								"driverUID" : "<driver_UID>",
+								"isSeen" : false,
+								"isResponded" : false,
+								"photoURL" : ""
+							}
+						]
+					}
+				]
+			},
+			"invoiceInfo" : {
+				"nextInvoiceID" : "000000001",
+				"<adveritser_UID>" : [
+					0 : {
+						"invoiceID" : "000000000",
+						"billingName" : "",
+						"billingEmail" : "",
+						"addressLineOne" : "",
+						"addressLineTwo" : "",
+						"suite" : "",
+						"city" : "",
+						"province" : "",
+						"country" : "",
+						"postalCode" : "",
+						"totalPrice" : 96800,
+						"numberOfDrivers" : 2,
+						"orderPlacedTimeStamp" : "yyyy-mm-ddThh:mm",
+						"chargedTimeStamp" : "yyyy-mm-ddThh:mm",
+						"pricingBreakdown" : {
+							"planUnitPrice" : 34900,
+							"planDescriptor" : "Back of car",
+							"distanceUnitPrice" : 13500,
+							"distance" : 1_000_000
+						}
+					}
+				]
+			}
+		}
+	},
+	"planInfo" : {
+		"planTypes" : [
+			0 : {
+				"planDescriptor" : "Side panels",
+				"startupCost" : 19900,
+				"CPK" : 12,
+				"pricingByDistance" : [
+					0 : 6000,
+					1 : 10800,
+					2 : 19200
+				]
+			},
+			1 : {
+				"planDescriptor" : "Back of car",
+				"startupCost" : 34900,
+				"CPK" : 15,
+				"pricingByDistance" : [
+					0 : 7500,
+					1 : 13500,
+					2 : 24000
+				]
+			},
+			2 : {
+				"planDescriptor" : "Full car",
+				"startupCost" : 39900,
+				"CPK" : 18,
+				"pricingByDistance" : [
+					0 : 9000,
+					1 : 16200,
+					2 : 28800
+				]
+			}
+		],
+		"distanceIndex" : [
+			0 : 250_000,
+			1 : 500_000,
+			2 : 1_000_000
+		]
+	}
+}
